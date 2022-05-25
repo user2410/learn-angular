@@ -1,0 +1,96 @@
+<div class="app">
+  <div class="header">
+    <div class="nav">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a href=""><i class="fa-solid fa-house"></i>Trang chủ</a>
+        </li>
+        <li class="nav-item">Nav 2</li>
+        <li class="nav-item">Nav 3</li>
+      </ul>
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a routerLink="login"><i class="fa-solid fa-lock"></i>Đăng nhập</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="content">
+    <nav class="sidebar">
+      <ul>
+        <li class="dropdown">
+          <a href="#">Sách tư duy - Kỹ năng sống</a>
+          <ul>
+            <li><a href="#">Sách kiểu ABC</a></li>
+            <li><a href="#">Sách kiểu DEF</a></li>
+            <li><a href="#">Sách kiểu...</a></li>
+            <li><a href="#">Sách kiểu...</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Tiểu thuyết</a></li>
+        <li><a href="#">Kiến thức - Bách khoa</a></li>
+        <li><a href="#">Truyện ngắn - Tản văn</a></li>
+        <li><a href="#">Sách học tiếng anh</a></li>
+        <li><a href="#">Truyện tranh</a></li>
+        <li><a href="#">Sách self-helf</a></li>
+      </ul>
+    </nav>
+    <div class="content-body">
+      <div class="slider">Hiển thị banner & sách ở đây...</div>
+      <div class="books-list">
+        <div class="book--item" *ngFor="let book of books">
+          <img [src]="book.image" alt="" class="book__img" />
+          <div class="book-body">
+            <h3 class="book__title">
+              {{ book.title }}
+            </h3>
+            <div class="book__rate book__rate--one">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+
+            <div class="book__rate book__rate--two">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+
+            <div class="book__rate book__rate--three">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+
+            <div class="book__rate book__rate--four">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+
+            <div class="book__rate book__rate--five">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <h3 class="book__cost">{{ book.price }}đ</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slider -->
+  <div class="slider"></div>
+</div>
