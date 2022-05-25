@@ -114,6 +114,32 @@
   color: #ccc;
 }
 
+.book__rate--1 i:nth-child(1) {
+  color: #FDDA40;
+}
+
+.book__rate--2 i:nth-child(1),
+.book__rate--2 i:nth-child(2) {
+  color: #FDDA40;
+}
+
+.book__rate--3 i:nth-child(1),
+.book__rate--3 i:nth-child(2),
+.book__rate--3 i:nth-child(3) {
+  color: #FDDA40;
+}
+
+.book__rate--4 i:nth-child(1),
+.book__rate--4 i:nth-child(2),
+.book__rate--4 i:nth-child(3),
+.book__rate--4 i:nth-child(4) {
+  color: #FDDA40;
+}
+
+.book__rate--5 i {
+  color: #FDDA40;
+}
+
 .book__rate--one {
 
 }

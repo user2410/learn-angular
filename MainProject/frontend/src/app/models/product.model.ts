@@ -5,4 +5,5 @@ export class Product {
   image: string | undefined;
   price!: number;
   quantity!: number;
+  rate!: number;
 }
