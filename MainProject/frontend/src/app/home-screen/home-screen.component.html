@@ -37,22 +37,51 @@
       </ul>
     </nav>
     <div class="content-body">
-      <div class="slider">Hiển thị banner & sách ở đây...</div>
+      <div class="slider">
+        <div class="slider__title">
+          <p>Top borrowed books</p>
+        </div>
+        <div class="slider__list">
+          <div class="top-book--item" *ngFor="let topBook of topBooks">
+            <img [src]="topBook.image" alt="" class="top-book__img" />
+            <div class="top-book__body">
+              <div class="top-book__borrowred-num">
+                <i class="fa-solid fa-user"></i>
+                <p>24</p>
+              </div>
+              <p class="top-book__price">
+                {{ topBook.price }}<i class="fa-brands fa-bitcoin"></i>
+              </p>
+              <div class="top-book__rate book__rate--5">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <div class="more-book">
+            <i class="fa-solid fa-angle-right"></i>
+            <p>Xem thêm</p>
+          </div>
+        </div>
+      </div>
       <div class="books-list">
-        <div class="book--item" *ngFor="let book of books">
+        <div class="book--item" *ngFor="let book of books" (click)="goToDetailBook(book.id)">
           <img [src]="book.image" alt="" class="book__img" />
           <div class="book-body">
-            <h3 class="book__title">
+            <p class="book__title">
               {{ book.title }}
-            </h3>
-            <div class="book__rate book__rate--{{book.rate}}">
+            </p>
+            <div class="book__rate book__rate--{{ book.rate }}">
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
             </div>
-            <h3 class="book__cost">{{ book.price }}đ</h3>
+            <h3 class="book__cost">{{ book.price }}<i class="fa-brands fa-bitcoin"></i></h3>
           </div>
         </div>
       </div>
@@ -62,3 +91,24 @@
   <!-- Slider -->
   <div class="slider"></div>
 </div>
+
+<!-- <app-drawer [visible]="visible" [position]="position" [header]="'Drawer Header'" (onHide)="onDrawerHide()">
+  <ul class="app-list">
+    <li class="app-list-item">
+      <em class="fa fa-home app-list-icons"></em>
+      Home
+    </li>
+    <li class="app-list-item">
+      <em class="fa fa-smile app-list-icons"></em>
+      some content
+    </li>
+  </ul>
+</app-drawer>
+
+<div class="buttons">
+  <div class="mb-10">
+    <button class="app-button mr-5" (click)="setVisibility('left')">Left</button>
+    <button class="app-button mr-5" (click)="setVisibility('right')">Right</button>
+
+  </div>
+</div> -->

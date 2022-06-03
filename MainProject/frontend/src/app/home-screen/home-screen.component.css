@@ -89,6 +89,76 @@
   /* flex: 4; */
 }
 
+.slider__title {
+  margin: 20px 30px;
+  text-align: left;
+  font-size: 20px;
+}
+
+.slider__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 100px;
+}
+
+.top-book--item {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #d4d4d4;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.top-book__img {
+
+}
+
+.top-book__body {
+  padding: 8px;
+}
+
+.top-book__borrowred-num {
+  font-size: 12px;
+  width: 36px;
+  line-height: 16px;
+  background-color: rgb(255, 240, 241);
+  color: rgb(255, 66, 78);
+  border: 1px solid rgb(255, 66, 78);
+  border-radius: 2px;
+}
+
+.top-book__borrowred-num p {
+  display: inline-block;
+  margin-left: 4px;
+}
+
+.top-book__price {
+  font-size: 16px;
+  color: rgb(255, 66, 78);
+  text-align: left;
+  margin: 4px 0;
+}
+
+.top-book__price i {
+  padding-left: 4px;
+  line-height: 12px;
+}
+
+.top-book__rate {
+  font-size: 12px;
+}
+
+.more-book {
+  color: rgb(13, 92, 182);
+  font-size: 15px;
+  width: 50px;
+  align-items: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  cursor: pointer;
+}
+
 .books-list {
   padding: 12px 0 32px 0;
   display: flex;
@@ -99,6 +169,8 @@
 .book--item {
   padding: 24px;
   width: 300px;
+  cursor: pointer;
+  font-size: 14px;
 }
 
 .book--item:hover {
@@ -112,6 +184,7 @@
 
 .book__rate {
   color: #ccc;
+  margin: 4px 0;
 }
 
 .book__rate--1 i:nth-child(1) {
