@@ -1,6 +1,8 @@
+import SwiperContainer from "../components/swiper/SwiperContainer";
+
 function HomePage(){
     return (<div>
-        Home page day ne
+        <SwiperContainer/>        
     </div>);
 }
 
